@@ -73,9 +73,9 @@ router.get(
   }),
 );
 router.get(
-  '/auth/google/callback',
+  '/google/callback',
   passport.authenticate('google', {
-    successRedirect: '/restaurant/view',
+    successRedirect: '/view',
     failureRedirect: '/login',
   }),
 );
