@@ -13,13 +13,20 @@ const userSchema = new Schema({
   },
   email:{
    type:String,
-   unique:true,
+  //  unique:true,
    required:true,
   },
   role:{
     type:String,
     enum:["Client","Admin"],
     default:"Client"
+  },
+  active:{
+    type:Boolean,
+    default: false,
+  },
+  confirmationCode:{
+    type:String,
   }
 }, {
   timestamps: {
