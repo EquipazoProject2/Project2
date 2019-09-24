@@ -168,3 +168,204 @@ background:rgba(179, 247, 215, 0.8);
 background:rgba(25, 232, 135, 0.8);
 }
 
+.japanese{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:rgba(179, 247, 215, 0.8);
+}
+.japanese form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.japanese input{
+  border-radius: 6px;
+  background: whitesmoke;
+}
+.japanese .input{
+ transition: 0.3s;
+ border-radius: 8px;
+background: whitesmoke;
+cursor: pointer;
+}
+
+.japanese .input:hover{
+background:rgba(232, 163, 25,   0.6);
+}
+
+.sub-japanese{
+  border: 2px solid grey;
+  padding: 70px;
+  border-radius: 10px;
+  background-image: url("../images/japo2v1.jpg");
+  background-size: cover;
+  background-position: center center; 
+  color: black; 
+  font-weight: 700; 
+}
+.arabic{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:rgba(179, 247, 215, 0.8);
+}
+.arabic form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.arabic input{
+  border-radius: 6px;
+  background: whitesmoke;
+}
+.arabic  .input{
+ transition: 0.3s;
+ border-radius: 8px;
+background:transparent;
+color: whitesmoke;
+cursor: pointer;
+}
+
+.arabic  .input:hover{
+background:rgba(232, 163, 25,   0.6);
+}
+
+.sub-arabic{
+  border: 2px solid grey;
+  padding: 70px;
+  border-radius: 10px;
+  background-image: url("../images/arab.jpg");
+  background-size: cover;
+  background-position: center center; 
+  color: whitesmoke; 
+}
+
+.lebanese{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:rgba(179, 247, 215, 0.8);
+}
+.lebanese form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lebanese input{
+  border-radius: 6px;
+  background: whitesmoke;
+}
+.lebanese  .input{
+ transition: 0.3s;
+ border-radius: 8px;
+background: white;
+color: black;
+cursor: pointer;
+}
+
+.lebanese  .input:hover{
+background:rgba(232, 163, 25,   0.6);
+}
+
+.sub-lebanese{
+  border: 2px solid grey;
+  padding: 70px;
+  border-radius: 10px;
+  background-image: url("../images/leban.jpg");
+  background-size: cover;
+  background-position: center center; 
+  color: black; 
+  font-weight: 400; 
+}
+
+.peruvean{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:rgba(179, 247, 215, 0.8);
+}
+.peruvean form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.peruvean input{
+  border-radius: 6px;
+  background: whitesmoke;
+}
+.peruvean  .input{
+ transition: 0.3s;
+ border-radius: 8px;
+background: white;
+color: black;
+cursor: pointer;
+}
+
+.peruvean .input:hover{
+background:rgba(178, 177, 173 ,0.6);
+}
+
+.sub-peruvean{
+  border: 2px solid grey;
+  padding: 70px;
+  border-radius: 10px;
+  background-image: url("../images/peru2v.jpg");
+  background-size: cover;
+  background-position: center center; 
+  color: whitesmoke; 
+  font-weight: 400; 
+}.indian{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:rgba(179, 247, 215, 0.8);
+}.indian form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.indian input{
+  border-radius: 6px;
+  background: whitesmoke;
+
+}.indian  .input{
+ transition: 0.3s;
+ border-radius: 8px;
+background:transparent;
+color: black;
+cursor: pointer;
+}
+.indian  .input:hover{
+background:rgba(178, 177, 173 ,0.6);
+}
+
+.sub-indian{
+  border: 2px solid grey;
+  padding: 70px;
+  border-radius: 10px;
+  background-image: url("../images/indian2.jpg");
+  background-size: cover;
+  background-position: center center; 
+  color: black; 
+  font-weight: 700; 
+}
