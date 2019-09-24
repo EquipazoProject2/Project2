@@ -167,8 +167,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: rgba(179, 247, 215, 0.8); }
+  height: 100vh; }
 
 .japanese form {
   display: flex;
@@ -197,15 +196,16 @@ img {
   background-size: cover;
   background-position: center center;
   color: black;
-  font-weight: 700; }
+  font-weight: 700;
+  height: 60vh;
+  width: 20vw; }
 
 .arabic {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: rgba(179, 247, 215, 0.8); }
+  height: 100vh; }
 
 .arabic form {
   display: flex;
@@ -234,15 +234,16 @@ img {
   background-image: url("../images/arab.jpg");
   background-size: cover;
   background-position: center center;
-  color: whitesmoke; }
+  color: whitesmoke;
+  height: 60vh;
+  width: 20vw; }
 
 .lebanese {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: rgba(179, 247, 215, 0.8); }
+  height: 100vh; }
 
 .lebanese form {
   display: flex;
@@ -272,15 +273,16 @@ img {
   background-size: cover;
   background-position: center center;
   color: black;
-  font-weight: 400; }
+  font-weight: 400;
+  height: 60vh;
+  width: 20vw; }
 
 .peruvean {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: rgba(179, 247, 215, 0.8); }
+  height: 100vh; }
 
 .peruvean form {
   display: flex;
@@ -310,15 +312,16 @@ img {
   background-size: cover;
   background-position: center center;
   color: whitesmoke;
-  font-weight: 400; }
+  font-weight: 400;
+  height: 60vh;
+  width: 20vw; }
 
 .indian {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: rgba(179, 247, 215, 0.8); }
+  height: 100vh; }
 
 .indian form {
   display: flex;
@@ -348,6 +351,39 @@ img {
   background-size: cover;
   background-position: center center;
   color: black;
-  font-weight: 700; }
+  font-weight: 700;
+  height: 60vh;
+  width: 20vw; }
+
+.cocktails {
+  border: 2px solid grey;
+  padding: 70px;
+  border-radius: 10px;
+  color: black;
+  font-weight: 700;
+  height: 60vh;
+  width: 20vw;
+  overflow-y: scroll; }
+
+.cocktails div {
+  margin-bottom: 3px; }
+
+.cocktails h2 {
+  margin-top: -50px; }
+
+#container-experience {
+  background: rgba(179, 247, 215, 0.8);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px; }
+
+#container-experience input {
+  width: 50%;
+  padding: 10px 5px;
+  opacity: 0.8; }
+
+#container-experience input[type="submit"] {
+  font-size: 20px; }
 
 /*# sourceMappingURL=style.css.map */
