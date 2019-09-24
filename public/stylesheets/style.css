@@ -92,4 +92,30 @@ img {
   left: 25%;
   top: 25%; }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(179, 247, 215, 0.8); }
+
+#form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+#form-container input {
+  border-radius: 6px;
+  background: whitesmoke; }
+
+#form-container button {
+  transition: 0.3s;
+  border-radius: 8px;
+  background: rgba(179, 247, 215, 0.8); }
+
+#form-container button:hover {
+  background: rgba(25, 232, 135, 0.8); }
+
 /*# sourceMappingURL=style.css.map */
