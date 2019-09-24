@@ -26,8 +26,7 @@ const reservationSchema = new Schema({
   },
   reservation_cuisine:{
     type:String
-  }
-
+  },
 }, {
   timestamps: {
     createdAt: 'created_at',

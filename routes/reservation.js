@@ -24,5 +24,8 @@ router.post('/createReservation',(req,res)=>{
 })
 
 
+router.get('/experience', (req, res, next) => {
+  res.render('restaurant/experience');
+});
 
 module.exports = router;

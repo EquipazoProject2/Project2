@@ -10,4 +10,5 @@ router.get('/view', (req, res, next) => {
   res.render('restaurant/view');
 });
 
+
 module.exports = router;
