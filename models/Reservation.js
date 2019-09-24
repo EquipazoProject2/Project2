@@ -9,7 +9,7 @@ const reservationSchema = new Schema({
   meal: {
     type: Array,
   },
-  drink: {
+  cocktail: {
     type: Array,
   },
   people: {
@@ -19,8 +19,14 @@ const reservationSchema = new Schema({
     type: Number
   },
   reservation_hour:{
-    type:Number
+    type:String
   },
+  reservation_date: {
+    type: String
+  },
+  reservation_cuisine:{
+    type:String
+  }
 
 }, {
   timestamps: {

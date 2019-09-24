@@ -77,6 +77,9 @@ app.use('/', index);
 
 const authRoutes = require('./routes/auth');
 app.use('/auth', authRoutes);
+
+const reservationRoutes = require('./routes/reservation');
+app.use('/', reservationRoutes);
       
 
 module.exports = app;
