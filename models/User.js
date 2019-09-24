@@ -16,10 +16,17 @@ const userSchema = new Schema({
     // unique: true,
     // required: true,
   },
-  role: {
-    type: String,
-    enum: ["Client", "Admin"],
-    default: "Client"
+  role:{
+    type:String,
+    enum:["Client","Admin"],
+    default:"Client"
+  },
+  active:{
+    type:Boolean,
+    default: false,
+  },
+  confirmationCode:{
+    type:String,
   },
   googleID: String,
   photo: String,
