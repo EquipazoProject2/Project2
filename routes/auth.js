@@ -54,8 +54,6 @@ router.post("/signup", (req, res, next) => {
 
     newUser.save()
       .then(() => {
-        // // console.log("**************" + email + "**************")
-        // // console.log(transporter)
         transporter.sendMail({
           from: `bAR <proyecto2ihpruebas@gmail.com>`,
           to: email,
@@ -74,7 +72,6 @@ router.post("/signup", (req, res, next) => {
 });
 
 router.get("/activation/:confirmCode", (req, res) => {
-  console.log("***********************" + req.params.confirmCode)
   User.findOneAndUpdate({ confirmationCode: req.params.confirmCode }, { $set: { active: true } }, { new: true })
     .then(() => {
       res.redirect("/view")
