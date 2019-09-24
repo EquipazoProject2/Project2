@@ -57,6 +57,7 @@ width: 70%;
   display: flex;
   justify-content:center;
   align-items: center;
+  z-index: 4;
 }
 .nav-bar a{
   color: white;
@@ -66,7 +67,7 @@ width: 70%;
   opacity: 0;
 }
 .filter{
-  background: rgba(0, 0, 0, 0);
+  background: rgba(179, 247, 215, 0.8);
   width: 100vw;
   height: 100vh;
   z-index: 2;
@@ -75,7 +76,7 @@ width: 70%;
   left:0;
 }
 .show{
-  background:  rgba(0, 0, 0, 0.8);
+  background:  rgba(179, 247, 215, 0.85);
   position: absolute;
 }
 .img-big{
@@ -87,9 +88,55 @@ width: 70%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 2px solid grey; 
 }
 .center{
   width: 50vw;
   left: 25%;
   top: 25%;
+}
+
+.view-form{
+  position: absolute;
+  width: 20%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+  right: 4vw;
+  top:0;
+  z-index: 3;
+  display: none;
+}
+
+.view-form input{
+  width:80%;
+  padding: 10px 5px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  text-align: center;
+  background:  rgba(179, 247, 215, 0.8);
+}
+
+.view-form input[type="submit"]{
+  width:50%;
+  padding: 3px ;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.show-form{
+  display:block;
+  width: 20%;
+  height: 84vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+  right:  7vw;
+  top:8vh;
+  z-index: 3;
 }

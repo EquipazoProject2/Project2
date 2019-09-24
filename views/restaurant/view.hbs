@@ -1,6 +1,6 @@
 <nav class="nav-bar">
   <a href="PONER PROFILE">Profile</a>
-  <a href="/logout">Logout</a>
+  <a href="/auth/logout">Logout</a>
 </nav>
 
 
@@ -30,3 +30,20 @@
 <div class="img-big">
   <img src="./images/Untitled-2.png" alt="tableBig">
 </div>
+
+
+<form action="" class="view-form">
+  <h3>Make your reservation</h3>
+  <input type="number" placeholder="Amount of people">
+  <input autocomplete="false" list="experiences" name="" placeholder="Choose your experience">
+  <datalist id="experiences">
+    <option value="Japanese">
+    <option value="Arabic">
+    <option value="Lebanese">
+    <option value="Indian">
+    <option value="Peruvian">
+  </datalist>
+  <label for="appt">Choose a time for your reservation</label>
+  <input type="time" id="appt" name="appt" min="09:00" max="23:00" required>
+  <input type="submit" value="Reservation">
+</form>

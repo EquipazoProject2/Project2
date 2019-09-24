@@ -17,7 +17,10 @@ const reservationSchema = new Schema({
   },
   table: {
     type: Number
-  }
+  },
+  reservation_hour:{
+    type:Number
+  },
 
 }, {
   timestamps: {
