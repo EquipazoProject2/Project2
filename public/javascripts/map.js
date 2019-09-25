@@ -114,7 +114,25 @@ window.onload = () => {
           lng: position.coords.longitude
         };
         map.setCenter(user_location);
+        const display = document.querySelector('label');
+        const click = document.querySelectorAll('option')
+        let desplegable = document.querySelector('.nav-bar-info div')
+        display.addEventListener('click', function () {
+          desplegable.style = 'height: 200px;'
+        })
 
+        for (var i = 0; i < click.length; i++) {
+          click[i].addEventListener('click', function () {
+            selectedMode = this.getAttribute('value')
+            console.log(desplegable)
+
+            displayRoute(user_location, selectedMode)
+            setTimeout(function () {
+              desplegable.setAttribute("style", "height:0")
+            }, 200)
+
+          })
+        }
         const userMarker = new google.maps.Marker({
           position: {
             lat: user_location.lat,
@@ -123,9 +141,7 @@ window.onload = () => {
           map: map,
           title: "You are here."
         });
-        trip.addEventListener('click', function () {
-          displayRoute(user_location)
-        })
+
       }, function () {
         console.log('Error in the geolocation service.');
       });
@@ -134,13 +150,14 @@ window.onload = () => {
     }
 
 
-    function displayRoute(user_location) {
+    function displayRoute(user_location, selectedMode) {
       const directionsService = new google.maps.DirectionsService;
       const directionsDisplay = new google.maps.DirectionsRenderer;
+      console.log(selectedMode)
       const directionRequest = {
         origin: { lat: user_location.lat, lng: user_location.lng },
         destination: { lat: 40.420148, lng: -3.705933 },
-        travelMode: 'DRIVING'
+        travelMode: google.maps.TravelMode[selectedMode]
       };
 
       directionsService.route(
@@ -158,18 +175,6 @@ window.onload = () => {
     }
 
 
-
-
-
-
-
-    // function toggleBounce() {
-    //   if (marker.getAnimation() !== null) {
-    //     marker.setAnimation(null);
-    //   } else {
-    //     marker.setAnimation(google.maps.Animation.BOUNCE);
-    //   }
-    // }
   }
   startMap();
 

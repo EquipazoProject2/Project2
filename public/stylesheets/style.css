@@ -22,13 +22,23 @@ a {
 .container-index h1 {
   font-size: 50px; }
 
+.container-index img {
+  width: 170px;
+  height: 90px;
+  opacity: 0.6;
+  margin-top: 70px; }
+
 .links-index {
   display: flex;
   justify-content: center;
   align-items: center; }
 
 .links-index a {
-  margin-left: 15px; }
+  margin-left: 15px;
+  transition: 0.3s; }
+
+.links-index a:hover {
+  color: rgba(232, 163, 25, 0.6); }
 
 .container-view {
   margin-top: 3px;
@@ -54,13 +64,13 @@ img {
   height: 6vh;
   background: grey;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   z-index: 4; }
 
 .nav-bar a {
   color: white;
-  margin: 15px; }
+  margin-right: 20px; }
 
 .hide {
   opacity: 0; }
@@ -152,7 +162,8 @@ img {
 
 #form-container input {
   border-radius: 6px;
-  background: whitesmoke; }
+  background: whitesmoke;
+  opacity: 0.7; }
 
 #form-container button {
   transition: 0.3s;
@@ -160,7 +171,13 @@ img {
   background: rgba(179, 247, 215, 0.8); }
 
 #form-container button:hover {
-  background: rgba(25, 232, 135, 0.8); }
+  background: rgba(232, 163, 25, 0.6); }
+
+#form-container a {
+  transition: 0.3s; }
+
+#form-container a:hover {
+  color: rgba(232, 163, 25, 0.6); }
 
 .japanese {
   display: flex;

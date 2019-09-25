@@ -5,25 +5,63 @@ body {
   height: 450px;
   width: 100%;
   position: absolute;
-  bottom: 0; }
+  bottom: 0;
+  background-image: cover; }
 
 .nav-bar-info {
   width: 100%;
   height: 6vh;
   background: grey;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
   z-index: 4; }
 
 .nav-bar-info a {
   color: white;
-  margin: 15px; }
+  margin: 15px;
+  transition: 0.3s; }
 
-.nav-bar-info button {
+.nav-bar-info a:hover {
+  color: rgba(232, 163, 25, 0.6); }
+
+.nav-bar-info input {
+  display: none; }
+
+.nav-bar-info label {
   color: white;
   margin: 15px;
-  background: none;
-  border: none; }
+  transition: 0.3s;
+  font-size: 15px;
+  background-color: grey;
+  z-index: 2; }
+
+.nav-bar-info label:hover {
+  color: rgba(232, 163, 25, 0.6); }
+
+.nav-bar-info div {
+  height: 0;
+  overflow: hidden;
+  transition: 0.2s all ease; }
+
+.nav-bar-info option {
+  color: black;
+  text-align: right;
+  padding: 3px;
+  transition: 0.3s; }
+
+.nav-bar-info option:hover {
+  color: rgba(232, 163, 25, 0.9); }
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 15px; }
+
+.text p {
+  margin-left: 10px;
+  line-height: 26px; }
 
 /*# sourceMappingURL=infoStyle.css.map */
