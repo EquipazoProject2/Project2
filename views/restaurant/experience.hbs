@@ -13,26 +13,31 @@
 
 <div id="container-experience">
 
-  <div class="indian">
-    <div class="sub-indian">
-      <h1>X experience</h1>
-      <form>
-        <label for="plato1">Couscous</label>
-        <input type="number" id="plato1">
-        <label for="plato2">Plato 2</label>
-        <input type="number" id="plato2">
-        <label for="plato3">Plato 3</label>
-        <input type="number" id="plato3">
-        <label for="plato4">Plato 4</label>
-        <input type="number" id="plato4">
-        <label for="plato5">Plato 5</label>
-        <input type="number" id="plato5">
-        <label for="plato6">Plato 6</label>
-        <input type="number" id="plato6">
+  <div class="{{reservation.reservation_cuisine}}">
+    <div class="sub-{{reservation.reservation_cuisine}}">
+      <h1>{{reservation.reservation_cuisine}} experience</h1>
+      <form action="/experience/{{reservation._id}}" method="POST">
+
+        {{#each meals}}
+        <div class="experience-container-input {{this.cuisine_type}}">
+          <label for="plato1">{{this.name}}</label>
+          <div class="resta">-</div>
+          <div class="semi-input">0</div>
+          <input value="0" type="number" name="meals">
+          <div class="suma">+</div>  
+        </div>
+        {{/each}}
+
+
+       
+        
+        
+        
+        
         {{!-- <label for="cocktail">Cocktail</label>
       <input type="number" id="cocktail"> --}}
-        <br><br>
-        <input class="input" type="submit" value="Submit Reservation">
+        <input type="hidden" name="drinks" value="">
+        <input class="input" type="submit"  value="Reservation Submit">
       </form>
     </div>
   </div>
@@ -41,10 +46,16 @@
   <div class="cocktails">
     <h2>Choose Cocktails</h2>
     {{#each drinks}}
-    <div>{{this.strDrink}}</div>
+    <div class="experience-container-cocktail">
+      <div class="cocktail-name">{{this.strDrink}}</div>
+      <div class="resta">-</div>
+      <div>0</div>
+      <div class="suma">+</div>
+    </div>
     {{/each}}
   </div>
 
 </div>
 
-{{!-- <div>{{this.drinks.[0].strDrink}}</div> --}}
+
+<script src="/javascripts/reserva.carta.js"></script>
