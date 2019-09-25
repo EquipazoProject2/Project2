@@ -55,9 +55,9 @@ router.post("/signup", (req, res, next) => {
     newUser.save()
       .then(() => {
         transporter.sendMail({
-          from: `bAR <proyecto2ihpruebas@gmail.com>`,
+          from: ` El baresiiito coctelero <proyecto2ihpruebas@gmail.com>`,
           to: email,
-          subject: "Confirmation mail",
+          subject: "Confirmation account",
           text: "Confirm",
           html: `<a href="http://localhost:3000/auth/activation/${confirmationCode}">Confirma tu cuenta</a>`
          
