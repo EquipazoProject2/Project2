@@ -1,0 +1,14 @@
+.container-profile{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+.container-profile form{
+  height: auto;
+  position: static;
+  display: block;
+  margin:0;
+}

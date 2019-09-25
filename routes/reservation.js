@@ -3,6 +3,8 @@ const router = express.Router();
 const Reservation = require("../models/Reservation");
 const Meal = require("../models/Meal")
 const axios = require('axios');
+const secure = require('../configs/middlewares')
+const User = require("../models/User");
 
 class ApiCocktail {
   constructor() {
@@ -79,10 +81,26 @@ router.post('/experience/:id',(req,res,next)=>{
       Reservation.findByIdAndUpdate(req.params.id, { $set: { meal: totalMeals } }, { new: true }).then(()=>{
         Reservation.findByIdAndUpdate(req.params.id, { $set: { cocktail: totalDrinks } }, { new: true }).then(()=>{
           console.log("ya")
+          res.redirect("/profile")
         })
       })
     })
   })
+})
+
+router.get('/profile', secure.checkLogin,(req,res,next)=>{
+
+  Reservation.find({ client_email:req.user.email}).then((reservation)=>{
+    User.find({ email: req.user.email}).then((users)=>{
+      users=users[0]
+      console.log(users.username)
+      res.render("restaurant/profile", { user: req.user, reservation,users })
+    })
+
+   
+  })
+
+  
 })
 
 module.exports = router;

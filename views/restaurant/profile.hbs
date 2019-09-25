@@ -1,0 +1,33 @@
+<div class="container-profile">
+
+{{#each reservation}}
+  
+      {{!-- <p>{{../users.username}}</p>
+      <p>{{this.reservation_hour}}</p>
+      <p>{{this.reservation_cuisine}}</p>
+      <p>{{this.reservation_date}}</p> --}}
+
+      <form action="/experience/{{this._id}}/" class="view-form" >
+        <h3>Edit your reservation</h3>
+        <input type="number" value="{{this.people}}" placeholder="Amount of people" name="people" required>
+        <input autocomplete="false" value="{{this.reservation_cuisine}}" list="experiences" placeholder="Choose your experience" name="reservation_cuisine"
+          required>
+        <datalist id="experiences">
+          <option value="Japanese">
+          <option value="Arabic">
+          <option value="Lebanese">
+          <option value="Indian">
+          <option value="Peruvian">
+        </datalist>
+        <label for="date">Date</label>
+        <input type="date" id="date" name="reservation_date" value="{{this.reservation_date}}" min="2019-09-22" max="2021-12-31" required>
+        <label for="reservation_hour">Reservation time</label>
+        <input type="time" id="reservation_hour" value="{{this.reservation_hour}}" name="reservation_hour" min="09:00" max="23:00" required>
+        <input type="hidden" name="table">
+        <input type="submit" value="Edit meal">
+      </form>
+      
+  
+{{/each}}
+
+</div>

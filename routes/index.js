@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const secure=require('../configs/middlewares')
+const User = require("../models/User");
 
 /* GET home page */
 router.get('/', (req, res, next) => {
