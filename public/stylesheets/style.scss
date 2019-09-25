@@ -153,6 +153,7 @@ width: 70%;
   background:rgba(179, 247, 215, 0.8);
 }
 #form-container{
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -172,229 +173,17 @@ background:rgba(179, 247, 215, 0.8);
 background:rgba(25, 232, 135, 0.8);
 }
 
-.japanese{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
- 
-}
-.japanese form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.japanese input{
-  border-radius: 6px;
-  background: whitesmoke;
-}
-.japanese .input{
- transition: 0.3s;
- border-radius: 8px;
-background: whitesmoke;
-cursor: pointer;
-}
-
-.japanese .input:hover{
-background:rgba(232, 163, 25,   0.6);
-}
-
-.sub-japanese{
-  border: 2px solid grey;
-  padding: 70px;
-  border-radius: 10px;
-  background-image: url("../images/japo2v1.jpg");
-  background-size: cover;
-  background-position: center center; 
-  color: black; 
-  font-weight: 700; 
-   height: 60vh;
-  width: 20vw;
-}
-.arabic{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-
-}
-.arabic form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.arabic input{
-  border-radius: 6px;
-  background: whitesmoke;
-}
-.arabic  .input{
- transition: 0.3s;
- border-radius: 8px;
-background:transparent;
-color: whitesmoke;
-cursor: pointer;
-}
-
-.arabic  .input:hover{
-background:rgba(232, 163, 25,   0.6);
-}
-
-.sub-arabic{
-  border: 2px solid grey;
-  padding: 70px;
-  border-radius: 10px;
-  background-image: url("../images/arab.jpg");
-  background-size: cover;
-  background-position: center center; 
-  color: whitesmoke;
-   height: 60vh;
-  width: 20vw;
-}
-
-.lebanese{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  
-}
-.lebanese form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.lebanese input{
-  border-radius: 6px;
-  background: whitesmoke;
-}
-.lebanese  .input{
- transition: 0.3s;
- border-radius: 8px;
-background: white;
-color: black;
-cursor: pointer;
-}
-
-.lebanese  .input:hover{
-background:rgba(232, 163, 25,   0.6);
-}
-
-.sub-lebanese{
-  border: 2px solid grey;
-  padding: 70px;
-  border-radius: 10px;
-  background-image: url("../images/leban.jpg");
-  background-size: cover;
-  background-position: center center; 
-  color: black; 
-  font-weight: 400; 
-  height: 60vh;
-  width: 20vw;
-}
-
-.peruvean{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
- 
-}
-.peruvean form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.peruvean input{
-  border-radius: 6px;
-  background: whitesmoke;
-}
-.peruvean  .input{
- transition: 0.3s;
- border-radius: 8px;
-background: white;
-color: black;
-cursor: pointer;
-}
-
-.peruvean .input:hover{
-background:rgba(178, 177, 173 ,0.6);
-}
-
-.sub-peruvean{
-  border: 2px solid grey;
-  padding: 70px;
-  border-radius: 10px;
-  background-image: url("../images/peru2v.jpg");
-  background-size: cover;
-  background-position: center center; 
-  color: whitesmoke; 
-  font-weight: 400; 
- height: 60vh;
-  width: 20vw;
-}
-.indian{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
- 
-}.indian form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.indian input{
-  border-radius: 6px;
-  background: whitesmoke;
-
-}.indian  .input{
- transition: 0.3s;
- border-radius: 8px;
-background:transparent;
-color: black;
-cursor: pointer;
-}
-.indian  .input:hover{
-background:rgba(178, 177, 173 ,0.6);
-}
-
-.sub-indian{
-  border: 2px solid grey;
-  padding: 70px;
-  border-radius: 10px;
-  background-image: url("../images/indian2.jpg");
-  background-size: cover;
-  background-position: center center; 
-  color: black; 
-  font-weight: 700; 
-  height: 60vh;
-  width: 20vw;
-}
-
 .cocktails{
-  border: 2px solid grey;
+  
+
   padding: 70px;
-  border-radius: 10px;
+  
   // background-image: url("../images/indian2.jpg");
   // background-size: cover;
   // background-position: center center; 
-  color: black; 
+  // color: black; 
   font-weight: 700; 
-  height: 60vh;
+  height: 40vh;
   width: 20vw;
   overflow-y: scroll;
 }
@@ -403,20 +192,114 @@ background:rgba(178, 177, 173 ,0.6);
 }
 .cocktails h2{
   margin-top: -50px;
+  font-size: 2em;
+  text-align: center;
 }
 #container-experience {
+  height: 100vh;
   background:rgba(179, 247, 215, 0.8);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 25px;
+  font-size: 20px;
+}
+#container-experience h1{
+ margin-top: -50px;
+ text-align: center;
+}
+
+#container-experience>div {
+  width: 35%;
+  height: 40vh;
+  padding: 70px;
+  box-shadow:0 2px rgba(0,0,0,0.3);
+  overflow-y:scroll;
+  
+}
+#container-experience div div{
+  width: 100%;
+  
+  
+}
+.semi-input{
+  font-size: 30px;
+  font-weight: 700;
 }
 
 #container-experience input{
-width: 50%;
+display:none;
 padding: 10px 5px;
 opacity: 0.8;
 }
 #container-experience input[type="submit"]{
-font-size: 20px;
+  position: fixed;
+  width: 200px;
+  height: 80px;
+  border-radius: 10px;
+  bottom: 5vh;
+  left: 43%;
+  font-size: 20px;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+transition: 0.3s all ease;
+display: block;
+}
+
+#container-experience input[type="submit"]:hover{
+  background: rgba(25, 232, 135, 0.8)
+}
+.experience-container-input,.experience-container-cocktail{
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+
+}
+.cocktails .experience-container-cocktail{
+
+  margin-bottom: 30px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.experience-container-cocktail div{
+  font-size: 30px;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.experience-container-cocktail div.cocktail-name{
+  width: 30%;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.experience-container-cocktail div.resta{
+  
+  margin-left: 20px;
+}
+.cocktail-name{
+  max-width: 40%;
+}
+
+.experience-container-input label{
+  display: block;
+  width: 70%;
+  font-size: 15px;
+  margin: 0;
+  margin-right: 35px;
+  display: flex;
+  align-items: center;
+
+  
+}
+
+.suma,.resta{
+  font-weight: 700; 
+  font-size: 30px;
+  cursor:pointer;
 }

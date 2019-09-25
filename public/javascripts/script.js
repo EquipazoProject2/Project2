@@ -11,6 +11,8 @@ let big = document.querySelectorAll('.img-big')[0];
 let form = document.querySelectorAll('.view-form')[0];
 let hidden = document.querySelectorAll('input[type="hidden"]')[0];
 
+
+
 for (var i = 0; i < tables.length; i++) {
   tables[i].setAttribute("data-table", i+1)
   tables[i].addEventListener('click', function (e) {
@@ -57,5 +59,6 @@ filter.addEventListener('click',function () {
     }
   }, 500)
 })
+
 
 
