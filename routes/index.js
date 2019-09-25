@@ -10,5 +10,9 @@ router.get('/view', (req, res, next) => {
   res.render('restaurant/view');
 });
 
+router.get('/info', (req, res, next) => {
+  res.render('restaurant/info');
+});
+
 
 module.exports = router;
