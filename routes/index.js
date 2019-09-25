@@ -7,7 +7,13 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/view', (req, res, next) => {
-  res.render('restaurant/view');
+  if (req.session.user){
+    res.render('restaurant/view');
+  }
+  else{
+    res.redirect('/auth/login')
+  }
+  
 });
 
 router.get('/info', (req, res, next) => {

@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const User = require("../models/User");
 
 const reservationSchema = new Schema({
 
   client_email: {
-    type: String
+    type:String
   },
   meal: {
     type: Array,

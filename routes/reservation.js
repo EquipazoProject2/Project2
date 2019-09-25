@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Reservation = require("../models/Reservation");
+const Meal = require("../models/Meal")
 const axios = require('axios');
 
 class ApiCocktail {
@@ -27,6 +28,7 @@ router.post('/createReservation', (req, res) => {
   const table = req.body.table;
 
   const newReservation = new Reservation({
+    client_email:req.user.email,
     people,
     reservation_cuisine,
     reservation_date,
@@ -35,16 +37,52 @@ router.post('/createReservation', (req, res) => {
   });
 
   newReservation.save().then(() => {
-    res.redirect("/experience")
+    
+    res.redirect(`/experience/${newReservation._id}`)
   })
 })
 
 
-router.get('/experience', (req, res, next) => {
+router.get('/experience/:id', (req, res, next) => {
   apiCocktails.getCocktails()
     .then((cocktail) => {
-      res.render('restaurant/experience', { drinks: cocktail.data.drinks })
+      Reservation.findById(req.params.id).then((reservation)=>{
+        
+        Meal.find({ cuisine_type: reservation.reservation_cuisine }).then((meals)=>{
+          
+          res.render('restaurant/experience', { drinks: cocktail.data.drinks,meals,reservation })
+        })
+        
+      })
+      
     })
 });
+
+
+router.post('/experience/:id',(req,res,next)=>{
+  console.log(req.body.meals)
+  Reservation.findById(req.params.id).then((reservation) => {
+    Meal.find({ cuisine_type: reservation.reservation_cuisine }).then((meals) => {
+    let mealsArr= req.body.meals
+    let totalMeals = []
+      let totalDrinks = req.body.drinks.split(',')
+   
+      Object.values(meals).forEach((meal,idx)=>{
+        for (let i = 0; i < +mealsArr[idx]; i++) {
+          totalMeals.push(meal.name)
+        }
+      })
+
+      console.log(totalMeals)
+      console.log(totalDrinks)
+
+      Reservation.findByIdAndUpdate(req.params.id, { $set: { meal: totalMeals } }, { new: true }).then(()=>{
+        Reservation.findByIdAndUpdate(req.params.id, { $set: { cocktail: totalDrinks } }, { new: true }).then(()=>{
+          console.log("ya")
+        })
+      })
+    })
+  })
+})
 
 module.exports = router;
