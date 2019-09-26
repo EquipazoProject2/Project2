@@ -88,12 +88,31 @@ router.post('/experience/:id', (req, res, next) => {
   })
 })
 
-router.get('/profile', secure.checkLogin, (req, res, next) => {
-  Reservation.find({ client_email: req.user.email }).then((reservation) => {
-    User.find({ email: req.user.email }).then((users) => {
-      users = users[0]
-      res.render("restaurant/profile", { user: req.user, reservation, users })
-    })
+router.get('/profile', secure.checkLogin,(req,res,next)=>{
+  var total_price = 0
+  var prices = []
+  Reservation.find({ client_email:req.user.email}).then((reservation)=>{
+    User.find({ email: req.user.email}).then(async(users)=>{
+      
+      for (let i = 0; i < reservation.length; i++) {
+        
+        for (let k = 0; k < reservation[i].meal.length; k++) {
+          await Meal.find({ name: reservation[i].meal[k]})
+          .then((meal)=>{
+            total_price += meal[0].price
+            // console.log(total_price)
+          })
+        }
+        // console.log(total_price)
+        prices.push(total_price)
+        console.log(prices)
+
+        
+      }
+      
+      users=users[0]
+      res.render("restaurant/profile", { user: req.user, reservation,users })
+    }) 
   })
 })
 
