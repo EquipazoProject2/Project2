@@ -7,14 +7,16 @@
 
 <div class="container-profile">
   <div class="column">
-    <img class="profile-img" src="{{users.photo}}" alt="">
+    <img class="profile-img" src={{users.photo}} alt="Profile picture">
     <h5>{{users.username}}</h5>
     <h5>{{users.email}}</h5>
+    <a href="/auth/logout">Logout</a>
+    <a href="/info">Info</a>
   </div>
   {{#each reservation}}
   <form action="/edit/{{this._id}}" class="view-form" method="POST">
     <h3>Edit your reservation</h3>
-    <input type="number" value="{{this.people}}" placeholder="Amount of people" name="people" required>
+    <input type="number" value="{{this.people}}" placeholder="Amount of people" name="people" max="10" required>
     <input autocomplete="false" value="{{this.reservation_cuisine}}" list="experiences"
       placeholder="Choose your experience" name="reservation_cuisine" required>
     <datalist id="experiences">

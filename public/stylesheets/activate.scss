@@ -1,0 +1,28 @@
+.activate {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.activate img{
+  width: 500px;
+  height: 500px;
+  opacity: 0.8;
+}
+
+.activate a{
+margin-top: 30px;
+transition: 0.3 all ease;
+ margin: 15px;
+}
+
+.activate a:hover{
+ color: rgba(232, 163, 25,   0.6);
+}
+
+.anchors{
+  display: flex;
+ 
+}
+

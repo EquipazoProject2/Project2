@@ -5,10 +5,13 @@ const User = require("../models/User");
 const randToken = require('rand-token');
 const transporter = require('../configs/nodemailer.config')
 
-// Bcrypt to encrypt passwords
+
 const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
 
+router.get("/activate", (req, res, next) => {
+  res.render("auth/activate");
+});
 
 router.get("/login", (req, res, next) => {
   res.render("auth/login", { "message": req.flash("error") });
@@ -62,7 +65,7 @@ router.post("/signup", (req, res, next) => {
           html: `<a href="https://el-baresiiito-coctelero-app.herokuapp.com/auth/activation/${confirmationCode}">Confirma tu cuenta</a>`
 
         })
-          .then(info => console.log(info), res.redirect("/"))
+          .then(info => console.log(info), res.redirect("/auth/activate"))
           .catch(error => console.log(error));
       })
       .catch(err => {

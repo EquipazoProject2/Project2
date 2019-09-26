@@ -30,7 +30,7 @@ margin-left: 5%;
 }
 .column{
   padding: 5px;
-width: 15vw;
+width: 17vw;
 display: flex;
 flex-direction: column; 
 background: rgba(126, 125, 125, 0.9);
@@ -41,4 +41,17 @@ left: 0;
 top: 0;
 height: 100vh;
 z-index: 10;
+}
+
+.column a{
+  color: whitesmoke;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top:8px;
+  transition: 0.3 all ease;
+}
+
+.column a:hover{
+  color: rgba(232, 163, 25,   0.6);
 }
