@@ -28,6 +28,9 @@ const reservationSchema = new Schema({
   reservation_cuisine:{
     type:String
   },
+  total_price:{
+    type:Number
+  }
 }, {
   timestamps: {
     createdAt: 'created_at',

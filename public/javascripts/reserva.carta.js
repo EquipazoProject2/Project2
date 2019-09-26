@@ -13,11 +13,12 @@ let cocktails=[]
 
 for (let i = 0; i < suma.length; i++) {
   suma[i].addEventListener('click', function () {
-    let att=this.parentNode.childNodes[7].getAttribute("value")
-    att++
-    this.parentNode.childNodes[7].setAttribute("value", att)
     console.log(this.parentNode.childNodes)
-    this.parentNode.childNodes[5].innerHTML++
+    let att=this.parentNode.childNodes[9].getAttribute("value")
+    att++
+    this.parentNode.childNodes[9].setAttribute("value", att)
+    console.log(this.parentNode.childNodes)
+    this.parentNode.childNodes[7].innerHTML++
     
   })
 
@@ -25,13 +26,13 @@ for (let i = 0; i < suma.length; i++) {
 
 for (let i = 0; i < resta.length; i++) {
   resta[i].addEventListener('click', function () {
-    let att = this.parentNode.childNodes[7].getAttribute("value")
+    let att = this.parentNode.childNodes[9].getAttribute("value")
     if (att>0) {
       
       att--
       console.log(att)
-      this.parentNode.childNodes[7].setAttribute("value", att)
-      this.parentNode.childNodes[5].innerHTML--
+      this.parentNode.childNodes[9].setAttribute("value", att)
+      this.parentNode.childNodes[7].innerHTML--
     }
   })
 

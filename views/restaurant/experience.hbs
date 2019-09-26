@@ -7,6 +7,7 @@
         {{#each meals}}
         <div class="experience-container-input {{this.cuisine_type}}">
           <label for="plato1">{{this.name}}</label>
+          <div>{{this.price}}$</div>
           <div class="resta">-</div>
           <div class="semi-input">0</div>
           <input value="0" type="number" name="meals">
@@ -25,6 +26,7 @@
     {{#each drinks}}
     <div class="experience-container-cocktail">
       <div class="cocktail-name">{{this.strDrink}}</div>
+      <div class="price">30$</div>
       <div class="resta">-</div>
       <div>0</div>
       <div class="suma">+</div>
