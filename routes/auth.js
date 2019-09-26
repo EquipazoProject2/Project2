@@ -4,6 +4,8 @@ const router = express.Router();
 const User = require("../models/User");
 const randToken = require('rand-token');
 const transporter = require('../configs/nodemailer.config')
+const secure = require('../configs/middlewares')
+const Reservation = require("../models/Reservation");
 
 
 const bcrypt = require("bcrypt");
@@ -12,9 +14,21 @@ const bcryptSalt = 10;
 router.get("/activate", (req, res, next) => {
   res.render("auth/activate");
 });
+router.get("/no", (req, res, next) => {
+  res.render("auth/");
+});
+
+router.get("/admin", [secure.checkLogin, secure.checkRole('Admin')], (req, res, next) => {
+  Reservation.find().then((reservation) => {
+    res.render("auth/admin", { reservation })
+  }).catch((err) => {
+    console.log(err)
+  })
+});
+
 
 router.get("/login", (req, res, next) => {
-  res.render("auth/login", { "message": req.flash("error") });
+  res.render("auth/login", { "message": req.flash("error") })
 });
 
 router.post("/login", passport.authenticate("local", {
