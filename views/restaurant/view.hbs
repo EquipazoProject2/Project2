@@ -1,5 +1,5 @@
 <nav class="nav-bar">
-  <a href="PONER PROFILE">Profile</a>
+  <a href="/profile">Profile</a>
   <a href="/auth/logout">Logout</a>
 </nav>
 
@@ -35,7 +35,8 @@
 <form action="/createReservation" class="view-form" method="POST">
   <h3>Make your reservation</h3>
   <input type="number" placeholder="Amount of people" name="people" required>
-  <input autocomplete="false" list="experiences" placeholder="Choose your experience" name="reservation_cuisine"required>
+  <input autocomplete="false" list="experiences" placeholder="Choose your experience" name="reservation_cuisine"
+    required>
   <datalist id="experiences">
     <option value="Japanese">
     <option value="Arabic">
