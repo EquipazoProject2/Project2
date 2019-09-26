@@ -1,13 +1,10 @@
 <div class="container-profile">
 
-{{#each reservation}}
-  
-      {{!-- <p>{{../users.username}}</p>
-      <p>{{this.reservation_hour}}</p>
-      <p>{{this.reservation_cuisine}}</p>
-      <p>{{this.reservation_date}}</p> --}}
+<img class="profile-img" src="{{users.photo}}" alt="">
+<h5>{{users.username}}</h5>
 
-      <form action="/experience/{{this._id}}/" class="view-form" >
+{{#each reservation}}
+      <form action="/edit/{{this._id}}" class="view-form" method="POST">
         <h3>Edit your reservation</h3>
         <input type="number" value="{{this.people}}" placeholder="Amount of people" name="people" required>
         <input autocomplete="false" value="{{this.reservation_cuisine}}" list="experiences" placeholder="Choose your experience" name="reservation_cuisine"

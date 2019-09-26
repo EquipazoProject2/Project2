@@ -95,12 +95,18 @@ router.get('/profile', secure.checkLogin,(req,res,next)=>{
       users=users[0]
       console.log(users.username)
       res.render("restaurant/profile", { user: req.user, reservation,users })
-    })
-
-   
+    }) 
   })
+})
 
-  
+
+
+router.post('/edit/:id',(req,res,next)=>{
+  Reservation.findByIdAndUpdate(req.params.id, {
+    $set: {
+      people: req.body.people, reservation_cuisine: req.body.reservation_cuisine, reservation_date: req.body.reservation_date, reservation_hour: req.body.reservation_hour }}, { new: true }).then(()=>{
+        res.redirect(`/experience/${req.params.id}`)
+      })
 })
 
 module.exports = router;
