@@ -5,6 +5,7 @@ const User = require("../models/User");
 const randToken = require('rand-token');
 const transporter = require('../configs/nodemailer.config')
 const secure = require('../configs/middlewares')
+const Reservation = require("../models/Reservation");
 
 
 const bcrypt = require("bcrypt");
@@ -18,15 +19,13 @@ router.get("/no", (req, res, next) => {
 });
 
 router.get("/admin", [secure.checkLogin, secure.checkRole('Admin')], (req, res, next) => {
-  res.render("auth/admin");
+  Reservation.find().then((reservation) => {
+    res.render("auth/admin", { reservation })
+  }).catch((err) => {
+    console.log(err)
+  })
 });
 
-router.post("/admin", passport.authenticate("local", {
-  successRedirect: "/auth/admin",
-  failureRedirect: "/auth/no",
-  failureFlash: true,
-  passReqToCallback: true
-}));
 
 router.get("/login", (req, res, next) => {
   res.render("auth/login", { "message": req.flash("error") })

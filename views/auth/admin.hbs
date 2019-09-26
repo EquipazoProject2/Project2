@@ -1,6 +1,29 @@
 <div class="container-admin">
-  <h2>Admin</h2>
-  <h5>{{users.email}}</h5>
+  <h2>Admin page</h2>
   <a href="/auth/logout">Logout</a>
-  <a href="/info">Info</a>
 </div>
+
+{{#each reservartion}}
+<form action="/edit/{{this._id}}" class="view-form" method="POST">
+  <h3>Edit reservation</h3>
+  <input type="number" value="{{this.people}}" placeholder="Amount of people" name="people" max="10" required>
+  <input autocomplete="false" value="{{this.reservation_cuisine}}" list="experiences" placeholder="Experience"
+    name="reservation_cuisine" required>
+  <datalist id="experiences">
+    <option value="Japanese">
+    <option value="Arabic">
+    <option value="Lebanese">
+    <option value="Indian">
+    <option value="Peruvian">
+  </datalist>
+  <label for="date">Date</label>
+  <input type="date" id="date" name="reservation_date" value="{{this.reservation_date}}" min="2019-09-22"
+    max="2021-12-31" required>
+  <label for="reservation_hour">Reservation time</label>
+  <input type="time" id="reservation_hour" value="{{this.reservation_hour}}" name="reservation_hour" min="09:00"
+    max="23:00" required>
+  <input type="hidden" name="table">
+  <input type="submit" value="Edit meal">
+</form>
+
+{{/each}}
