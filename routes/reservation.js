@@ -97,8 +97,6 @@ router.get('/profile', secure.checkLogin, (req, res, next) => {
   })
 })
 
-
-
 router.post('/edit/:id', (req, res, next) => {
   Reservation.findByIdAndUpdate(req.params.id, {
     $set: {
