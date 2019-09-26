@@ -59,8 +59,8 @@ router.post("/signup", (req, res, next) => {
           to: email,
           subject: "Confirmation account",
           text: "Confirm",
-          html: `<a href="http://localhost:3000/auth/activation/${confirmationCode}">Confirma tu cuenta</a>`
-         
+          html: `<a href="https://el-baresiiito-coctelero-app.herokuapp.com/auth/activation/${confirmationCode}">Confirma tu cuenta</a>`
+
         })
           .then(info => console.log(info), res.redirect("/"))
           .catch(error => console.log(error));

@@ -1,6 +1,4 @@
-// Seeds file that remove all users and create 2 new users
-// To execute this seed, run from the root of the project
-// $ node bin/seeds.js
+require('dotenv').config();
 const mongoose = require("mongoose");
 const Meal = require("../models/Meal");
 
