@@ -1,18 +1,4 @@
-{{!-- <div class"{{reservation.reservation_cuisine}}">
-</div> --}}
-{{!-- <div class="japanese">
-  <div class="sub-japanese"> --}}
-{{!-- <div class="arabic">
-  <div class="sub-arabic"> --}}
-{{!-- <div class="lebanese">
-  <div class="sub-lebanese"> --}}
-{{!-- <div class="peruvean">
-  <div class="sub-peruvean"> --}}
-
-
-
 <div id="container-experience">
-
   <div class="{{reservation.reservation_cuisine}}">
     <div class="sub-{{reservation.reservation_cuisine}}">
       <h1>{{reservation.reservation_cuisine}} experience</h1>
@@ -24,24 +10,15 @@
           <div class="resta">-</div>
           <div class="semi-input">0</div>
           <input value="0" type="number" name="meals">
-          <div class="suma">+</div>  
+          <div class="suma">+</div>
         </div>
         {{/each}}
 
-
-       
-        
-        
-        
-        
-        {{!-- <label for="cocktail">Cocktail</label>
-      <input type="number" id="cocktail"> --}}
         <input type="hidden" name="drinks" value="">
-        <input class="input" type="submit"  value="Reservation Submit">
+        <input class="input" type="submit" value="Submit Reservation">
       </form>
     </div>
   </div>
-
 
   <div class="cocktails">
     <h2>Choose Cocktails</h2>

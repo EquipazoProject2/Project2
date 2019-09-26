@@ -4,16 +4,39 @@
   flex-direction: row;
   justify-content: flex-start;
   height: 100vh;
+  align-items: center;
+  padding: 0 15vw;
+  position: relative;
 }
 
 .container-profile form{
-  height: auto;
+  height: 400px;
+  display: inline-block;
   position: static;
   display: block;
-  margin:0;
+  margin:20px;
+  border-radius: 10px;
+  display: flex;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+
 }
 
-.profile-img{
-width: 50px;
-height: 80px;
+.column .profile-img{
+width: 100%;
+border-radius: 15px;
+}
+.column{
+  padding: 5px;
+width: 15vw;
+display: flex;
+flex-direction: column; 
+background: rgba(126, 125, 125, 0.9);
+color: whitesmoke;
+text-align: center;
+position: fixed;
+left: 0;
+top: 0;
+height: 100vh;
+z-index: 10;
 }
