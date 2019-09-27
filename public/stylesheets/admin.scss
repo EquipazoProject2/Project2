@@ -1,39 +1,53 @@
-a{
-  transition: 0.3 all ease;
-}  
+.nav-bar-admin{
+  height: 7vh;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 12;
+  background:rgba(179, 247, 215, 0.9);
+  box-shadow: 0 2px rgba(0,0,0, 0.3);
+  color: black;
+}
+.nav-bar-admin h2{
+  margin-left: 15px;
+}
 
-a:hover{
+.nav-bar-admin a{
+  margin-right: 15px;
+  transition: 0.3 all ease;
+  font-weight: 700;
+}
+
+ a:hover{
   color: rgba(232, 163, 25,   0.6);
 }
 
 .container-admin{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 15px;
-  margin-right: 20px;
-  border-bottom: 1px solid black;
-}
-.container-admin{
+  padding-top: 8vh;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-around;
   height: 100vh;
   align-items: center;
-  padding: 0 20vw;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .container-admin form{
   height: 500px;
+  width: 23%;
   display: inline-block;
   position: static;
   display: block;
   margin: 20px;
   border-radius: 10px;
   display: flex;
-  overflow-x: hidden;
+  overflow-y  : hidden;
   flex-wrap: nowrap;
   text-align: center;
 }
+
