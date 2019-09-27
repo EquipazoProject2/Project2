@@ -20,6 +20,8 @@ router.get("/no", (req, res, next) => {
 
 router.get("/admin", [secure.checkLogin, secure.checkRole('Admin')], (req, res, next) => {
   Reservation.find().then((reservation) => {
+    
+    console.log(reservation)
     res.render("auth/admin", { reservation })
   }).catch((err) => {
     console.log(err)

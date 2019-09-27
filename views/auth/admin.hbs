@@ -1,9 +1,8 @@
 <div class="container-admin">
   <h2>Admin page</h2>
   <a href="/auth/logout">Logout</a>
-</div>
 
-{{#each reservartion}}
+{{#each reservation}}
 <form action="/edit/{{this._id}}" class="view-form" method="POST">
   <h3>Edit reservation</h3>
   <input type="number" value="{{this.people}}" placeholder="Amount of people" name="people" max="10" required>
@@ -24,6 +23,15 @@
     max="23:00" required>
   <input type="hidden" name="table">
   <input type="submit" value="Edit meal">
+
+  <a href="/delete/{{this._id}}">Delete</a>
 </form>
 
 {{/each}}
+</div>
+
+<style>
+  body {
+    overflow: auto
+  }
+</style>

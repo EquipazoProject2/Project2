@@ -128,4 +128,11 @@ router.post('/edit/:id', (req, res, next) => {
   })
 })
 
+
+router.get('/delete/:id',(req,res,next)=>{
+  Reservation.findByIdAndDelete(req.params.id).then(()=>{
+    res.redirect("/auth/admin")
+  })
+})
+
 module.exports = router;
