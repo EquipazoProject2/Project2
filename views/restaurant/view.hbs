@@ -35,7 +35,7 @@
 
 <form action="/createReservation" class="view-form" method="POST">
   <h3>Make your reservation</h3>
-  <input type="number" placeholder="Amount of people" name="people" max="10" required>
+  <input type="number" placeholder="Amount of people" name="people" min="1" max="10" required>
   <input autocomplete="false" list="experiences" placeholder="Choose your experience" name="reservation_cuisine"
     required>
   <datalist id="experiences">
