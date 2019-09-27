@@ -35,14 +35,26 @@
     <input type="hidden" name="table">
     <input type="submit" value="Edit meal">
     {{!-- <p>{{../this.prices}}$</p> --}}
-    <p>{{../this.prices}}$</p>
+    <p class="final-prices"></p>
+    <div id="cocktails" style="display:none">{{this.cocktail}}</div>
     <a href="/profile-delete/{{this._id}}">Delete</a>
   </form>
 
   {{/each}}
   <div id="prices" style="display:none">{{prices}}</div>
+  
 </div>
 
 <script>
-  console.log()
+  var final=document.querySelectorAll(".final-prices")
+  let separar=prices.innerHTML.split(",")
+  
+  console.log(cocktails)
+  for(var i=0;i<final.length;i++){
+    priceC=cocktails[i].innerHTML.split(",")
+    priceC=priceC.length*30
+    
+    
+    final[i].innerHTML=`${+separar[i] + priceC} $`
+  }
 </script>

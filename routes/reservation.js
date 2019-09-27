@@ -98,6 +98,8 @@ router.get('/profile', secure.checkLogin, (req, res, next) => {
           await Meal.find({ name: reservation[i].meal[k] })
             .then((meal) => {
               total_price += meal[0].price
+              
+
               // console.log(total_price)
             })
         }

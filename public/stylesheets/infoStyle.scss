@@ -48,15 +48,26 @@ color: rgba(232, 163, 25,   0.6);
   height: 0;
   overflow: hidden;
   transition: 0.2s all ease;
+  position: relative;
+    top: 10px;
+    left: 20px;
+  
+  
 }
 
 
 .nav-bar-info option {
   color: black;
   text-align: right;  
-  padding: 3px;
+  padding: 7px 20px;
   transition: 0.3s;
+  background: grey;
+  opacity: 0.8;
   
+  
+}
+.ultimo{
+  border-radius: 0 0 0px 10px;
 }
 
 .nav-bar-info option:hover {

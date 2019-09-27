@@ -49,10 +49,14 @@ filter.addEventListener('click',function () {
   big.style.top = preTop + "px";
   big.style.left = preLeft + "px";
   form.classList.toggle('show-form')
-
+  filter.style="transition:0.5s all ease"
+  setTimeout(() => {
+    filter.style="opacity:0"
+  }, 1);
   setTimeout(function () {
     big.style.transition = "0"
     filter.classList.toggle('show')
+    filter.style = "opacity:1"
     big.style=""
     for (let i = 0; i < tables.length; i++) {
       tables[i].classList.remove('hide');
