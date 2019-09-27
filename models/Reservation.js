@@ -5,7 +5,7 @@ const User = require("../models/User");
 const reservationSchema = new Schema({
 
   client_email: {
-    type:String
+    type: String
   },
   meal: {
     type: Array,
@@ -19,17 +19,17 @@ const reservationSchema = new Schema({
   table: {
     type: Number
   },
-  reservation_hour:{
-    type:String
+  reservation_hour: {
+    type: String
   },
   reservation_date: {
     type: String
   },
-  reservation_cuisine:{
-    type:String
+  reservation_cuisine: {
+    type: String
   },
-  total_price:{
-    type:Number
+  total_price: {
+    type: Number
   }
 }, {
   timestamps: {
