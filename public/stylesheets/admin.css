@@ -4,20 +4,27 @@
   top: 0;
   width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   z-index: 12;
-  background: rgba(179, 247, 215, 0.9);
-  box-shadow: 0 2px rgba(0, 0, 0, 0.3);
-  color: black; }
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px rgba(0, 0, 0, 0.3); }
 
-.nav-bar-admin h2 {
-  margin-left: 15px; }
+.admin {
+  margin-right: 1120px;
+  color: whitesmoke; }
+
+.nav-bar-admin h3 {
+  margin-left: 15px;
+  color: whitesmoke; }
 
 .nav-bar-admin a {
   margin-right: 15px;
   transition: 0.3 all ease;
   font-weight: 700; }
+
+.delete {
+  color: white; }
 
 a:hover {
   color: rgba(232, 163, 25, 0.6); }
@@ -31,7 +38,8 @@ a:hover {
   height: 100vh;
   align-items: center;
   position: relative;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  color: whitesmoke; }
 
 .container-admin form {
   height: 500px;
@@ -44,6 +52,10 @@ a:hover {
   display: flex;
   overflow-y: hidden;
   flex-wrap: nowrap;
-  text-align: center; }
+  text-align: center;
+  border: 1px solid whitesmoke;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 3px 11px 41px 10px whitesmoke;
+  color: whitesmoke; }
 
 /*# sourceMappingURL=admin.css.map */

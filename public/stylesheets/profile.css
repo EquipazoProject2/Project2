@@ -8,18 +8,19 @@
   padding: 0 20vw;
   position: relative; }
 
-.container-profile form {
-  height: 500px;
-  padding: 0 50px;
-  display: inline-block;
-  position: static;
-  display: block;
-  margin: 20px;
-  border-radius: 10px;
+.reservas {
+  border: 1px solid whitesmoke;
+  padding: 100px;
+  height: 70vh;
+  color: whitesmoke;
   display: flex;
-  overflow-x: hidden;
-  flex-wrap: nowrap;
-  text-align: center; }
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 3px 11px 41px 10px whitesmoke; }
 
 .column .profile-img {
   width: 90%;
@@ -32,7 +33,7 @@
   width: 17vw;
   display: flex;
   flex-direction: column;
-  background: rgba(126, 125, 125, 0.9);
+  background: rgba(0, 0, 0, 0.8);
   color: whitesmoke;
   text-align: center;
   position: fixed;

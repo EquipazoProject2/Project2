@@ -11,10 +11,11 @@
     <h5>{{users.username}}</h5>
     <h5>{{users.email}}</h5>
     <a href="/auth/logout">Logout</a>
+    <a href="/view">Home</a>
     <a href="/info">Info</a>
   </div>
   {{#each reservation}}
-  <form action="/edit/{{this._id}}" class="view-form" method="POST">
+  <form action="/edit/{{this._id}}" class="reservas" method="POST">
     <h3>Edit your reservation</h3>
     <input type="number" value="{{this.people}}" placeholder="Amount of people" name="people" min="1" max="10" required>
     <input autocomplete="false" value="{{this.reservation_cuisine}}" list="experiences"
@@ -34,7 +35,6 @@
       max="23:00" required>
     <input type="hidden" name="table">
     <input type="submit" value="Edit meal">
-    {{!-- <p>{{../this.prices}}$</p> --}}
     <p class="final-prices"></p>
     <div id="cocktails" style="display:none">{{this.cocktail}}</div>
     <a href="/profile-delete/{{this._id}}">Delete</a>
@@ -42,19 +42,19 @@
 
   {{/each}}
   <div id="prices" style="display:none">{{prices}}</div>
-  
+
 </div>
 
 <script>
-  var final=document.querySelectorAll(".final-prices")
-  let separar=prices.innerHTML.split(",")
-  
+  var final = document.querySelectorAll(".final-prices")
+  let separar = prices.innerHTML.split(",")
+
   console.log(cocktails)
-  for(var i=0;i<final.length;i++){
-    priceC=cocktails[i].innerHTML.split(",")
-    priceC=priceC.length*30
-    
-    
-    final[i].innerHTML=`${+separar[i] + priceC} $`
+  for (var i = 0; i < final.length; i++) {
+    priceC = cocktails[i].innerHTML.split(",")
+    priceC = priceC.length * 30
+
+
+    final[i].innerHTML = `${+separar[i] + priceC} $`
   }
 </script>
